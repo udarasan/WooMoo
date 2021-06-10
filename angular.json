@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "WooMoo"
+  "defaultProject": "WooMoo",
+  "cli": {
+    "analytics": "96fe85b8-ae0e-4081-ab30-c06fbc59ad01"
+  }
 }
