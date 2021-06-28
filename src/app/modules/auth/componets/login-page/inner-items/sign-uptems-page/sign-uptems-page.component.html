@@ -1,1 +1,36 @@
-<p>sign-uptems-page works!</p>
+<div class="outer">
+  <form class="example-form" [formGroup]="signUpForm">
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>First name</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Second name</mat-label>
+      <input matInput>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill">
+      <mat-label>Email</mat-label>
+      <input type="email" matInput placeholder="Ex. pat@example.com" formControlName="email">
+
+      <mat-error *ngIf="signUpForm.get('email')?.touched && signUpForm.get('email')?.invalid">
+        Please enter a valid email address
+      </mat-error>
+
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width" appearance="fill" >
+      <mat-label>Password</mat-label>
+      <input type="password" matInput formControlName="password">
+
+      <mat-error *ngIf="signUpForm.get('password')?.touched && signUpForm.get('password')?.invalid">
+        Please enter a valid email address
+      </mat-error>
+
+    </mat-form-field>
+
+    <button [disabled]="signUpForm.invalid" mat-raised-button class="register-button">Registered</button>
+  </form>
+</div>

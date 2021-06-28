@@ -7,7 +7,7 @@ import {SignUptemsPageComponent} from './componets/login-page/inner-items/sign-u
 import {LoginItemsPageComponent} from './componets/login-page/inner-items/login-items-page/login-items-page.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/auth/login', pathMatch: 'full'},
+  {path: '', redirectTo: '/auth/login/access', pathMatch: 'full'},
   {path : 'login', component: LoginPageComponent, children: [
       {path: '', redirectTo: '/auth/login/access', pathMatch: 'full'},
       {path: 'register', component: SignUptemsPageComponent},
